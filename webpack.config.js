@@ -8,5 +8,10 @@ const src = {
 module.exports = {
     mode: 'development',
     context: src.src, //контекст для путей
-    entry: './main.js'
+    entry: './main.js', //точки входа
+
+    devServer: { //настройки сервера
+        port: 3000,
+        open: true, //открыть браузер
+    }
 }
