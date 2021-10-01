@@ -6,12 +6,29 @@ const src = {
 }
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     context: src.src, //контекст для путей
     entry: './main.js', //точки входа
 
     devServer: { //настройки сервера
         port: 3000,
         open: true, //открыть браузер
+    },
+
+    module: {
+        rules: [ //правила обработки модулей
+            {
+                test: /\.js$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
+        ]
+
+
     }
 }
