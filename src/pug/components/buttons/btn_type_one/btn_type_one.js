@@ -1,0 +1,1 @@
+console.log("btn_type_one script importat");
