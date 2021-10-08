@@ -22,6 +22,9 @@ const isDev = process.env.NODE_ENV === 'development' ? true : false;
 module.exports = {
     mode: 'development',
     context: src.src, //контекст для путей
+    experiments: {
+        asset: true
+    },
     entry: { //точки входа
         main: src.scripts+"/main.js",
         firstPageScript: src.pages+"/first_page/first_page.js",
@@ -42,6 +45,20 @@ module.exports = {
     module: {
         rules: [ //правила обработки модулей
             {
+                test: /\.(html)$/,
+                use: ['html-loader']
+            },
+            {
+                test: /\.png|jpg|svg/,
+                type: 'asset',
+                type: 'asset/resource',
+
+            },
+            {
+                test: /\.(jpg|png|svg|ttf|woff|eot)$/,
+                type: 'asset/resource',
+            },
+            {
                 test: /\.s[ac]ss$/i,
                 use: [
                     "style-loader",
@@ -50,7 +67,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.js$/,
+                test: /\.m?js$/,
                 exclude: /(node_modules)/,
                 use: {
                     loader: 'babel-loader',

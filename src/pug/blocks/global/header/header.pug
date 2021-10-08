@@ -2,9 +2,8 @@
 
 include ../../../components/buttons/btn_type_one/btn_type_one.pug
 header.header.container 
-    //- img.header__logo(src=require('../../../assets/img/logo.png'), alt="")
     .header__logo 
-        h2="header"
+        img.header__logo(src=require('../../../assets/img/logo.png'), alt="")
     .header__nav
         +btn_type_one('header__nav-btn', 'header button')
         +btn_type_one('header__nav-btn', 'header button')
