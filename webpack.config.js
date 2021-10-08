@@ -1,19 +1,20 @@
 const path = require('path');
-const _path = (link) => path.resolve(__dirname, link)
+const _path = (link) => path.join(__dirname, link)
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const src = {
-    src: _path('./src'),
-    pug: _path('./src/pug'),
-    components: _path('./src/components'),
-    blocks: _path('./src/blocks'),
-    pages: _path('./src/pug/pages'),
-    scripts: _path('./src/scripts/')
+    src: _path('src'),
+    pug: _path('src/pug'),
+    components: _path('src/components'),
+    blocks: _path('src/blocks'),
+    pages: _path('src/pug/pages'),
+    scripts: _path('src/scripts/')
 }
 const dist = {
-    src: _path('./dist'),
-    pages: _path('./dist/pages')
+    src: _path('dist'),
+    pages: _path('dist/pages')
 }
 
 const isDev = process.env.NODE_ENV === 'development' ? true : false;
@@ -27,8 +28,11 @@ module.exports = {
     },
     entry: { //точки входа
         main: src.scripts+"/main.js",
-        firstPageScript: src.pages+"/first_page/first_page.js",
-        secondPageScript: src.pages+"/second_page/second_page.js" 
+        registration: src.pages+"/registration/registration.js",
+        sing_in: src.pages+"/sign_in/sign_in.js",
+        room_details: src.pages+"/room_details/room_details.js",
+        search_room: src.pages+"/search_room/search_room.js",
+        sign_in: src.pages+"/sign_in/sign_in.js",
     },
     output: {   //настройка выхода
         filename: isDev ? 'scripts/[name].js' : 'scripts/[name].[contenthash].js',
@@ -88,19 +92,54 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: _path(src.pages + '/first_page/first_page.pug'),
-            filename: 'index.html',
-            title: 'First Page',
-            chunks: ['main', 'firstPageScript'],
+            template: src.pages + '/registration/registration.pug',
+            filename: './pages/registration.html',
+            title: 'registration',
+            chunks: ['main', 'registration'],
             minify: !isDev,
             
         }),
         new HtmlWebpackPlugin({
-            template: _path(src.pages + '/second_page/second_page.pug'),
-            filename: '/pages/second_page.html',
+            template: src.pages + '/sign_in/sign_in.pug',
+            filename: './pages/sign_in.html',
             title: 'Second Page',
-            chunks: ['main', 'secondpageScript'],
+            chunks: ['main', 'sign_in'],
+            minify: !isDev,
+        }),
+        new HtmlWebpackPlugin({
+            template: src.pages + '/room_details/room_details.pug',
+            filename: './pages/room_details.html',
+            title: 'Room Details',
+            chunks: ['main', 'room_details'],
+            minify: !isDev,
+        }),
+        new HtmlWebpackPlugin({
+            template: src.pages + '/search_room/search_room.pug',
+            filename: './pages/search_room.html',
+            title: 'Search Room',
+            chunks: ['main', 'search_room'],
+            minify: !isDev,
+        }),
+        new HtmlWebpackPlugin({
+            template: src.pages + '/landing_page/landing_page.pug',
+            filename: './pages/landing_page.html',
+            title: 'Second Page',
+            chunks: ['main', 'landing_page'],
             minify: !isDev,
         }),
     ],
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin({
+            extractComments: false,
+        })],
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    name: 'vendors',
+                    chunks: 'all',
+                }
+            }
+        }
+    },
 }
