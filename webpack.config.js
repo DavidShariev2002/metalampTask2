@@ -50,7 +50,6 @@ module.exports = {
             },
             {
                 test: /\.png|jpg|svg/,
-                type: 'asset',
                 type: 'asset/resource',
 
             },
@@ -73,7 +72,8 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: ['@babel/preset-env']
-                    }
+                    },
+                    
                 },
                 
             },
