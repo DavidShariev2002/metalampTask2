@@ -1,0 +1,6 @@
+mixin input_simple(className, placeholder, title, subtitle)
+    div(class="input-wrapper input-wrapper__"+className)
+        if(title)
+            h3.title=title
+                span=subtitle
+        input(class="input "+className placeholder=placeholder)&attributes(attributes)

@@ -1,0 +1,23 @@
+mixin input_dorpdown(className, placeholder, title, subtitle, params = [], action=true)
+    div(class="input-wrapper input-wrapper__dropdown input-wrapper__"+className)
+        if(title!=='')
+            h3.title=title
+                span=subtitle
+        input(class="input input__dropdown "+className placeholder=placeholder)&attributes(attributes)
+        <svg class="input__dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"/>
+        </svg> 
+
+        if(params.length > 0)
+            .dropdown-panel 
+                each par in params 
+                    .dropdown-panel__line 
+                        h3=par 
+                        .dropdown-panel__line-settings.zero-value
+                            button(type="button").dropdown-panel__line-btn.dropdown-panel__line-settings-down -
+                            span.dropdown-panel__line-settings-number 0
+                            button(type="button").dropdown-panel__line-btn.dropdown-panel__line-settings-up +
+                if(action)
+                    .dropdown-panel__actions 
+                        button(type='button').countform__btns-clear очистить
+                        button(type='button').countform__btns-access применить

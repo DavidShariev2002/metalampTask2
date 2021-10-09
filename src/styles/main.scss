@@ -1,8 +1,10 @@
-@import url('./_fonts.scss');
+@import './_fonts.scss';
+@import '_components.scss';
 
 *{
     box-sizing: border-box;
     outline: none;
+    flex-shrink: 0;
 
 }
 
@@ -44,3 +46,9 @@ a{
     }
 }
 
+button{
+    cursor: pointer;
+}
+input{
+    cursor: pointer;
+}

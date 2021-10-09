@@ -1,9 +1,8 @@
 
 import '../styles/main.scss';
 
-import '../pug/components/buttons/btn_type_one/btn_type_one'
-import '../pug/components/buttons/btn_type_one/btn_type_one.scss'
+import '../pug/components/inputs/input_dropdown/input_dropdown';
 
-console.log('main script included...')
+console.warn('main script included')
 
 
