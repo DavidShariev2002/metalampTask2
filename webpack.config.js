@@ -10,7 +10,8 @@ const src = {
     components: _path('src/components'),
     blocks: _path('src/blocks'),
     pages: _path('src/pug/pages'),
-    scripts: _path('src/scripts/')
+    scripts: _path('src/scripts/'),
+    styles: _path('src/styles/')
 }
 const dist = {
     src: _path('dist'),
@@ -28,8 +29,9 @@ module.exports = {
     },
     entry: { //точки входа
         main: src.scripts+"/main.js",
+        components: src.pages+"/components/components.js",
+        landing_page: src.pages+"/landing_page/landing_page.js",
         registration: src.pages+"/registration/registration.js",
-        sing_in: src.pages+"/sign_in/sign_in.js",
         room_details: src.pages+"/room_details/room_details.js",
         search_room: src.pages+"/search_room/search_room.js",
         sign_in: src.pages+"/sign_in/sign_in.js",
@@ -66,7 +68,13 @@ module.exports = {
                 use: [
                     "style-loader",
                     "css-loader",
-                    "sass-loader"
+                    "sass-loader",
+                    {
+                        loader: 'sass-resources-loader',
+                        options: {
+                            resources: [ src.styles + './_vars.scss']
+                        }
+                    }
                 ],
             },
             {
@@ -92,9 +100,17 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            template: src.pages + '/components/components.pug',
+            filename: './index.html',
+            title: 'Components',
+            chunks: ['main', 'components'],
+            minify: !isDev,
+
+        }),
+        new HtmlWebpackPlugin({
             template: src.pages + '/registration/registration.pug',
             filename: './pages/registration.html',
-            title: 'registration',
+            title: 'Registration',
             chunks: ['main', 'registration'],
             minify: !isDev,
             
@@ -133,13 +149,5 @@ module.exports = {
         minimizer: [new TerserPlugin({
             extractComments: false,
         })],
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    name: 'vendors',
-                    chunks: 'all',
-                }
-            }
-        }
     },
 }
