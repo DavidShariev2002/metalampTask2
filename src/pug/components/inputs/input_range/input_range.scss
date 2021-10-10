@@ -1,0 +1,12 @@
+
+.input-range{
+    
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    justify-content: space-between;
+
+    .input-wrapper{
+        width: calc(50% - 10px);
+    }
+}

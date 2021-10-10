@@ -4,7 +4,7 @@ import '../../../../../node_modules/inputmask/dist/jquery.inputmask.min.js';
 
 $(document).ready(function () {
     var dateInputMask = new Inputmask('99.99.99')
-    dateInputMask.mask(".mask-date")
+    dateInputMask.mask("input.mask-date")
 })
 
 
