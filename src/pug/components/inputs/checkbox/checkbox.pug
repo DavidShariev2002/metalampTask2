@@ -1,0 +1,4 @@
+mixin checkbox(className, text, group, radioname)
+    div(class="checkbox checkbox-"+className)
+        input( class="checkbox__input "+className name=group id=radioname type="checkbox")
+        label( clsas="checkbox__label " for=radioname)= text
