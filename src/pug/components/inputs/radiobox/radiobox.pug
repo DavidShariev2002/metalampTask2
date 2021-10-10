@@ -1,0 +1,4 @@
+mixin radiobox(className, text, group, radioname='radio')
+    .radiobox
+        input( class="radiobox__input "+className name=group id=radioname type="radio")
+        label( clsas="radiobox__label " for=radioname)= text

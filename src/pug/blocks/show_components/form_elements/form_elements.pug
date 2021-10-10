@@ -9,10 +9,15 @@
         +subscription('some-subscription', 'Email', 'subscription text field')
 
     div.form-elements__column
-        h3.checkbox_tilte='checkbox buttons'
+        h3.checkbox-tilte='checkbox buttons'
         +checkbox('some-checkbox', 'Можно курить', 'first-group', 'first-group-1')
         +checkbox('some-checkbox', 'Можно c питомцами', 'first-group', 'first-group-2')
         +checkbox('some-checkbox', 'Можно пригласить гостей (до 10 человек)', 'first-group', 'first-group-3')
+
+        h3.radio-title='radio buttons'
+        .radio
+            +radiobox('some-radio', 'Мужчина', 'group-1', 'group-1-1')
+            +radiobox('some-radio', 'Женщина', 'group-1', 'group-1-2')
 
 
     div.form-elements__column
