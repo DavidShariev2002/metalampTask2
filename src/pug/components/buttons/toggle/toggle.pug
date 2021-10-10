@@ -1,0 +1,4 @@
+mixin toggle(className, text, radioname='radio')
+    .toggle_wrapper
+        input( class="toggle__input "+className  id=radioname type="checkbox")
+        label( clsas="toggle__label " for=radioname)= text
