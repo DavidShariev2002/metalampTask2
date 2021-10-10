@@ -1,0 +1,50 @@
+
+.like{
+    position: relative;
+    padding: 1px 8px 2px 19px;
+
+    border: 1px solid $darkshadow25;
+    border-radius: 10px;
+
+    .like__icon{
+        position: absolute;
+        left: 5px;
+        top: 6px;
+
+        &--unclicked{
+            display: block;
+        }
+        &--clicked{
+            display: none;
+        }
+    }
+    
+    &__number{
+        display: inline-block;
+        min-width: 10px;
+
+        color: $darkshadow25;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0em;
+    }
+
+    
+
+}
+
+.like--clicked{
+    border: 1px solid $purple;
+
+    .like__icon--clicked{
+        display: block;
+    }
+    .like__icon--unclicked{
+        display: none;
+    }
+
+    .like__number{
+        color: $purple
+    }
+}

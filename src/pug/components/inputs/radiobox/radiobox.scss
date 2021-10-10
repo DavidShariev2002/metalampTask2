@@ -1,6 +1,7 @@
 
 .radiobox{
-    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
     .radiobox__input{
         width: 20px;
         height: 20px;
@@ -26,8 +27,6 @@
         line-height: 18px;
         transition-duration: .4s;
         margin-left: 10px;
-        top: -7px;
-        left: -3px;
 
         cursor: pointer;
 

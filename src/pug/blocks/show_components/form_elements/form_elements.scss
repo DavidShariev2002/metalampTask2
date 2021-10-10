@@ -17,13 +17,17 @@
         margin-top: 20px;
     }
 
-    .radio-title, .toggle-title{
+    &__title{
         margin-top: 40px;
     }
     .radio{
         max-width: 220px;
         display: flex;
         justify-content: space-between;
+    }
+
+    .some-like-1{
+        margin-right: 10px;
     }
     
 }

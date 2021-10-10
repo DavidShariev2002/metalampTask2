@@ -9,6 +9,7 @@ import '../pug/components/inputs/subscription/subscription';
 import '../pug/components/inputs/checkbox/checkbox';
 import '../pug/components/inputs/radiobox/radiobox';
 import '../pug/components/buttons/toggle/toggle';
+import '../pug/components/other/like/like'
 
 console.log('%c main script is working', 'color: green; font-size: 20px; font-weight: bolder;')
 

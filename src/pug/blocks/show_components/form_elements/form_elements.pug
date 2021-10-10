@@ -14,14 +14,18 @@
         +checkbox('some-checkbox', 'Можно c питомцами', 'first-group', 'first-group-2')
         +checkbox('some-checkbox', 'Можно пригласить гостей (до 10 человек)', 'first-group', 'first-group-3')
 
-        h3.radio-title='radio buttons'
+        h3.radio-title.form-elements__title='radio buttons'
         .radio
             +radiobox('some-radio', 'Мужчина', 'group-1', 'group-1-1')
             +radiobox('some-radio', 'Женщина', 'group-1', 'group-1-2')
         
-        h3.toggle-title="toggle"
-        +toggle('some-toggle', 'Получать спецпредложения', radioname='radio')
-        +toggle('some-toggle', 'Получать спецпредложения', radioname='radio')
+        h3.toggle-title.form-elements__title="toggle"
+        +toggle('some-toggle', 'Получать спецпредложения', 'toggle-1')
+        +toggle('some-toggle', 'Получать спецпредложения', 'toggle-2')
+
+        h3.like-title.form-elements__title='like button'
+        +like('some-like-1 ', 2)
+        +like('some-like-2 like--clicked', 12)
 
 
     div.form-elements__column

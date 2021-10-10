@@ -3,7 +3,7 @@ import './input_simple.scss';
 import '../../../../../node_modules/inputmask/dist/jquery.inputmask.min.js';
 
 $(document).ready(function () {
-    var dateInputMask = new Inputmask('99.99.99')
+    var dateInputMask = new Inputmask({ alias: "datetime", inputFormat: "dd/mm/yyyy", placeholder:'ДД.ММ.ГГГГ' })
     dateInputMask.mask("input.mask-date")
 })
 
