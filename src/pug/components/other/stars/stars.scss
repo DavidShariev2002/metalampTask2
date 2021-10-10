@@ -1,0 +1,9 @@
+.rate{
+    width: 120px;
+    display: flex;
+    li{
+        display: inline-block;
+        margin-right: 4px;
+        cursor: pointer;
+    }
+}
