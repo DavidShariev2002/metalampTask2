@@ -1,0 +1,12 @@
+.input-wrapper{
+    margin-bottom: 20px;
+}
+
+.form-elements{
+    display: flex;
+    justify-content: space-between;
+
+    &__column{
+        min-width: 33.33%;
+    }
+}

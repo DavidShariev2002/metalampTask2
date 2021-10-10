@@ -1,6 +1,9 @@
 mixin input_simple(className, placeholder, title, subtitle)
-    div(class="input-wrapper input-wrapper__"+className)
-        if(title)
+    if(title)
+        div(class="input-wrapper input-wrapper-"+className)
             h3.title=title
                 span=subtitle
+            input(class="input "+className placeholder=placeholder)&attributes(attributes)
+    if(!title)
         input(class="input "+className placeholder=placeholder)&attributes(attributes)
+            

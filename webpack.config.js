@@ -1,5 +1,6 @@
 const path = require('path');
 const _path = (link) => path.join(__dirname, link)
+const webpack = require('webpack')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -29,7 +30,7 @@ module.exports = {
     },
     entry: { //точки входа
         main: src.scripts+"/main.js",
-        components: src.pages+"/components/components.js",
+        components: src.pages+"/show_components/show_components.js",
         landing_page: src.pages+"/landing_page/landing_page.js",
         registration: src.pages+"/registration/registration.js",
         room_details: src.pages+"/room_details/room_details.js",
@@ -99,8 +100,12 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+        }),
         new HtmlWebpackPlugin({
-            template: src.pages + '/components/components.pug',
+            template: src.pages + '/show_components/show_components.pug',
             filename: './index.html',
             title: 'Components',
             chunks: ['main', 'components'],
