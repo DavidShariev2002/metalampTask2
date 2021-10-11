@@ -1,10 +1,11 @@
+.btn-type-four{
+    position: relative;
+    width: 100%;
+    max-width: 320px;
 
-
-.btn-type-one{
-    padding: 14px 20px 15px 20px;
+    padding: 14px 44px 15px 20px;
 
     font-family: Montserrat;
-
     color: #fff;
     font-size: 12px;
     font-weight: bold;
@@ -17,8 +18,14 @@
     border-radius: 22px;
 
     transition-duration: .4s;
-
+    
     &:hover, &--hover{
         opacity: .5;
+    }
+
+    &__icon{
+        position: absolute;
+        right: 14px;
+        top: 13px;
     }
 }

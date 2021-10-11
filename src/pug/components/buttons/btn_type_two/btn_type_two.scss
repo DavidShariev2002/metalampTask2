@@ -1,21 +1,20 @@
-
-
-.btn-type-one{
-    padding: 14px 20px 15px 20px;
+.btn-type-two{
+    padding: 10px 18px 13px 18px;
 
     font-family: Montserrat;
 
-    color: #fff;
+    color: $purple;
     font-size: 12px;
     font-weight: bold;
     line-height: 15px;
     letter-spacing: 0em;
     text-transform: uppercase;
 
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-color: #fff;
 
+    border: 2px solid $purple;
     border-radius: 22px;
-
+    
     transition-duration: .4s;
 
     &:hover, &--hover{

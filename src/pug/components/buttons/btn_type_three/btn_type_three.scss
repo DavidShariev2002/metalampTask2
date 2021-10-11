@@ -1,7 +1,4 @@
-
-
-.btn-type-one{
-    padding: 14px 20px 15px 20px;
+.btn-type-three{
 
     font-family: Montserrat;
 
@@ -12,13 +9,12 @@
     letter-spacing: 0em;
     text-transform: uppercase;
 
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-
-    border-radius: 22px;
+    color: $purple;
 
     transition-duration: .4s;
 
     &:hover, &--hover{
+        color: $darkshadow50;
         opacity: .5;
     }
 }

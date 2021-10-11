@@ -5,9 +5,15 @@
 .form-elements{
     display: flex;
     justify-content: space-between;
+    align-content: flex-end;
 
     &__column{
-        min-width: 33.33%;
+        
+        min-width: 320px;
+
+        &:nth-child(2){
+            padding-left: 28px;
+        }
     }
 
     .range-date-dropdown, .wrapper-some-subscription{
@@ -34,6 +40,21 @@
         width: 260px;
         display: flex;
         justify-content: space-between;
+    }
+
+    .buttons-title{
+        margin-top: 25px;
+    }
+    .btns-wrapper{
+        width: 250px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        button{
+            margin-bottom: 30px;
+            margin-right: 20px;
+        }
     }
 }
 
