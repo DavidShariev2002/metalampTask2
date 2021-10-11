@@ -11,6 +11,7 @@ import '../pug/components/inputs/radiobox/radiobox';
 import '../pug/components/buttons/toggle/toggle';
 import '../pug/components/other/like/like';
 import '../pug/components/other/stars/stars';
+import '../pug/components/other/range_line/range_line';
 
 console.log('%c main script is working', 'color: green; font-size: 20px; font-weight: bolder;')
 

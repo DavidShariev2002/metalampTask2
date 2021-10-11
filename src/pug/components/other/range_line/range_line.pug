@@ -1,0 +1,10 @@
+mixin range(className, title, startValue, endValue, subtitle) 
+    div(class='range '+className start-val=startValue end-val=endValue)
+        h3.range__title=title
+            span.range__title-values=startValue+"₽ - "+endValue+"₽"
+        .range__slider-wrapper
+            .range__slider 
+                .range__slider-point.range__slider-point--left
+                .range__slider-point.range__slider-point--right
+                .range__slider-line
+        span=subtitle
