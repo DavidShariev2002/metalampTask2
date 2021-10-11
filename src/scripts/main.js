@@ -16,6 +16,7 @@ import '../pug/components/buttons/btn_type_one/btn_type_one';
 import '../pug/components/buttons/btn_type_two/btn_type_two';
 import '../pug/components/buttons/btn_type_three/btn_type_three';
 import '../pug/components/buttons/btn_type_four/btn_type_four';
+import '../pug/components/other/pagination/pagination';
 
 console.log('%c main script is working', 'color: green; font-size: 20px; font-weight: bolder;')
 

@@ -1,0 +1,21 @@
+mixin pagination(className, pageNumber, text)
+    div(class="pagination "+pagination, text)
+        .pagination__nav
+            .pagination__nav-pages
+                .pagination__nav-pages-list(style="left: 0px")
+                    - var i = 1;
+                    button.pagination__nav-pages-item.pagination__nav-pages-item--active.pagination__nav-pages-item--1='1'
+                    while i<pageNumber
+                        button(class="pagination__nav-pages-item pagination__nav-pages-item--"+i++)=i
+            .pagination__nav-buttons 
+                button.pagination__nav-buttons-button-prev.pagination__nav-buttons-button='...' 
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="white"/>
+                    </svg>
+                button.pagination__nav-buttons-button=pageNumber
+                button.pagination__nav-buttons-button-next.pagination__nav-buttons-button.pagination__nav-buttons-button--active='...'
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z" fill="white"/>
+                    </svg>
+        .pagination__span=text
+
