@@ -1,0 +1,6 @@
+mixin rich_checkbox(className, title, subtitle, group, radioname)
+    .checkbox
+        input( class="checkbox__input "+className name=group id=radioname type="checkbox")
+        label( class="checkbox__label " for=radioname)
+            strong=title
+            span=subtitle

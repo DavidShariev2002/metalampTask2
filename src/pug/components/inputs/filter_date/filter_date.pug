@@ -1,5 +1,6 @@
 
-mixin filter_date(className, title)
+mixin filter_date(className, title, element)
     div(class="filter-date filter-"+className)
         +input_dropdown(className, 'начало - конец', title)
         div(class="filter-date__dropdown")
+            element

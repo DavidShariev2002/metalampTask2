@@ -7,6 +7,10 @@
     justify-content: space-between;
     align-content: flex-end;
 
+    &--2{
+        padding-top: 80px;
+    }
+
     &__column{
         
         min-width: 320px;
@@ -41,6 +45,9 @@
         display: flex;
         justify-content: space-between;
     }
+    .wrapper-some-dropdown-quests{
+    width: 265px;
+}
 
     .buttons-title{
         margin-top: 25px;
@@ -55,6 +62,15 @@
             margin-bottom: 30px;
             margin-right: 20px;
         }
+    }
+}
+
+.form-elements--2{
+    .some-checkbox-dropdown--1{
+        margin-top: 160px;
+    }
+    .some-checkbox-dropdown--2{
+        margin-top: 11px;
     }
 }
 

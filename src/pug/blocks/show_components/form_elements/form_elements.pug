@@ -1,4 +1,4 @@
-.container.form-elements
+.container.form-elements.form-elements--1
     div.form-elements__column
         +input_simple('email','Email','text field', 'default')
         +input_simple('input--active', '', 'text field', 'hover/focus')(value='This is pretty awesome')
@@ -48,4 +48,42 @@
         h3.pagination-title.form-elements__title='pagination'
         +pagination('some-pagination', 15, '1 - 12 из 100+ вариантов аренды')
 
+
+.container.form-elements.form-elements--2
+    div.form-elements__column
+        +input_dropdown('some-dropdown-quests', '2 спальни, 2 кровати...', 'dropdown', 'default',)
+        +input_dropdown_quests('some-dropdown-quests', 'Удобства...', 'dropdown', 'expended', 0)
         
+        
+    div.form-elements__column
+        +input_dropdown_quests('some-dropdown-quests', 'Удобства...', 'dropdown', 'expended', 1)
+    div.form-elements__column
+        +input_dropdown_quests('some-dropdown-quests', 'Удобства...', 'dropdown', 'expended', 2)
+
+.container.form-elements.form-elements--3
+    .form-elements__column
+        +checkbox_list(
+            'some-checkbox-dropdown--1', 
+            'expandable checkbox list',
+            ['завтрак', 'письменный стол', 'Стул для кормления', 'Кровати', 'Телевизор', 'Шампунь', 'Телевизор', 'Шмпунь'],
+            rich=false)
+            +checkbox_list(
+            'some-checkbox-dropdown--2 ', 
+            'expandable checkbox list',
+            ['завтрак', 'письменный стол', 'Стул для кормления', 'Кровати', 'Телевизор', 'Шампунь', 'Телевизор', 'Шмпунь'],
+            rich=false)
+    
+    .form-elements__column
+        h3.form-elements__title='rich checkbox buttons'
+        +rich_checkbox(
+            'some-rich-checkbox',
+            'Широкий коридор',
+            'Ширина коридоров в номере не менее 91 см.',
+            'rich-checkbox-1', 'rich-checkbox-1')
+        +rich_checkbox(
+            'some-rich-checkbox',
+            'Помощник для инвалидов',
+            'На 1 этаже вас встретит специалист  и проводит до номера.',
+            'rich-checkbox-2', 'rich-checkbox-2')
+    
+    .form-elements__column

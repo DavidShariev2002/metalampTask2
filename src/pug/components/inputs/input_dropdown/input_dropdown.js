@@ -4,7 +4,6 @@ let dropdownInputs = document.querySelectorAll('.input-dropdown')
 
 dropdownInputs.forEach(input => {
    input.addEventListener( 'click', function(event){
-       console.error('dropdown')
        this.querySelector('.input-dropdown__icon').classList.toggle('input-dropdown__icon--rotated')
    }) 
 });

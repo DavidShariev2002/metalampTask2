@@ -1,0 +1,13 @@
+mixin guests_dropdown(className, params, action)
+    div(class="guests-dropdown guests-dropdown-"+action+" "+className)
+        each par in params 
+            .guests-dropdown__line 
+                h3=par 
+                .guests-dropdown__line-settings.zero-value
+                    button(type="button").guests-dropdown__line-btn.guests-dropdown__line-settings-down -
+                    span.guests-dropdown__line-settings-number 0
+                    button(type="button").guests-dropdown__line-btn.guests-dropdown__line-settings-up +
+            
+        .guests-dropdown__actions 
+            +btn_type_three('countform__btns-clear', 'очистить')(type='button')
+            +btn_type_three('countform__btns-access', 'применить')(type='button') 
