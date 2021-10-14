@@ -1,9 +1,9 @@
 import './checkbox_list.scss';
 
-var lists = document.querySelectorAll('.list');
+var lists = document.querySelectorAll('.list h3');
 lists.forEach(el => {
     el.addEventListener('click', function (event) {
-        this.classList.toggle('list--closed')
+        this.parentElement.classList.toggle('list--closed')
     })
 });
 

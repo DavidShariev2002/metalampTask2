@@ -21,6 +21,8 @@ import '../pug/components/other/guests_dropdown/guests_dropdown';
 import '../pug/components/inputs/input_dropdown_guests/input_dropdown_guests';
 import '../pug/components/lists/checkbox_list/checkbox_list';
 import '../pug/components/inputs/rich_checkbox/rich_checkbox';
+import '../pug/components/lists/bullet_list/bullet_list';
+import '../pug/components/other/plus/plus';
 
 console.log('%c main script is working', 'color: green; font-size: 20px; font-weight: bolder;')
 

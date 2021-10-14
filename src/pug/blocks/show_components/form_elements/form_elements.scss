@@ -46,7 +46,7 @@
         justify-content: space-between;
     }
     .wrapper-some-dropdown-quests{
-    width: 265px;
+        width: 265px;
 }
 
     .buttons-title{
@@ -65,12 +65,22 @@
     }
 }
 
-.form-elements--2{
+.form-elements--3{
+    padding-top: 146px;
     .some-checkbox-dropdown--1{
-        margin-top: 160px;
+        margin-bottom: 10px;
+
+        h3{
+            padding-top: 0;
+        }
     }
-    .some-checkbox-dropdown--2{
-        margin-top: 11px;
-    }
+    
 }
 
+.form-elements--4{
+    padding-top: 220px;
+
+    .some-plus--1{
+        margin-bottom: 40px;
+    }
+}

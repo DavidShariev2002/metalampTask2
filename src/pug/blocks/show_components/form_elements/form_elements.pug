@@ -65,16 +65,16 @@
         +checkbox_list(
             'some-checkbox-dropdown--1', 
             'expandable checkbox list',
-            ['завтрак', 'письменный стол', 'Стул для кормления', 'Кровати', 'Телевизор', 'Шампунь', 'Телевизор', 'Шмпунь'],
+            ['текст 1'],
             rich=false)
-            +checkbox_list(
-            'some-checkbox-dropdown--2 ', 
-            'expandable checkbox list',
-            ['завтрак', 'письменный стол', 'Стул для кормления', 'Кровати', 'Телевизор', 'Шампунь', 'Телевизор', 'Шмпунь'],
-            rich=false)
+        +checkbox_list(
+        'some-checkbox-dropdown--2 ', 
+        'expandable checkbox list',
+        ['завтрак', 'письменный стол', 'Стул для кормления', 'Кровати', 'Телевизор', 'Шампунь', 'Телeвизор', 'Шaмпунь'],
+        rich=false)
     
     .form-elements__column
-        h3.form-elements__title='rich checkbox buttons'
+        h3.rich-checkbox-title='rich checkbox buttons'
         +rich_checkbox(
             'some-rich-checkbox',
             'Широкий коридор',
@@ -86,4 +86,17 @@
             'На 1 этаже вас встретит специалист  и проводит до номера.',
             'rich-checkbox-2', 'rich-checkbox-2')
     
+    .form-elements__column
+        +bullet_list(
+            'some-bullet-list-1', 
+            'bullet list',
+                ['Нельзя с питомцами',
+                 'Нельзя с питомцами',
+                 'Время прибытия — после 13:00, а выезд до 12:00'])
+
+.container.form-elements.form-elements--4
+    .form-elements__column
+        +plus('some-plus--1', 'Комфорт', 'шумопоглащающие средства', './assets/img/dynamic/smile.svg')
+        +plus('some-plus--2', 'Удобство', 'Окно в кадой из спален', './assets/img/dynamic/building.svg')
+    .form-elements__column 
     .form-elements__column

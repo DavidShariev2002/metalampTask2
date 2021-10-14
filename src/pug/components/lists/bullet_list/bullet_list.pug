@@ -1,0 +1,9 @@
+mixin bullet_list(className, title, bullets)
+    div(class='bullet-list ' + className)
+        h3.bullet-list__title=title 
+        if(bullets.length > 0)
+            ul.bullet-list__items.list__items
+                each bullet in bullets
+                    li
+                        .dot 
+                        span=bullet

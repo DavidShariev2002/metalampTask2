@@ -1,6 +1,7 @@
 const path = require('path');
 const _path = (link) => path.join(__dirname, link)
 const webpack = require('webpack')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -12,7 +13,8 @@ const src = {
     blocks: _path('src/blocks'),
     pages: _path('src/pug/pages'),
     scripts: _path('src/scripts/'),
-    styles: _path('src/styles/')
+    styles: _path('src/styles/'),
+    images: _path('src/assets/images/')
 }
 const dist = {
     src: _path('dist'),
@@ -100,6 +102,11 @@ module.exports = {
         ]
     },
     plugins: [
+        new CopyPlugin({
+            patterns: [
+                { from: path.resolve(__dirname, "src/assets/img/dynamic"), to: "assets/img/dynamic" },
+            ],
+        }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',

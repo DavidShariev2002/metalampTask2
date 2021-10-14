@@ -1,11 +1,12 @@
-
 .checkbox-list{
-    &-title{
+    &__title{
         display: inline-flex;
         justify-content: space-between;
         min-width: 266px;
         margin-bottom: 18px;
         padding: 10px 7px 10px 0;
+
+        cursor: pointer;
     }
 }
 
