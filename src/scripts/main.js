@@ -23,6 +23,7 @@ import '../pug/components/lists/checkbox_list/checkbox_list';
 import '../pug/components/inputs/rich_checkbox/rich_checkbox';
 import '../pug/components/lists/bullet_list/bullet_list';
 import '../pug/components/other/plus/plus';
+import '../pug/components/other/review/review'
 
 console.log('%c main script is working', 'color: green; font-size: 20px; font-weight: bolder;')
 

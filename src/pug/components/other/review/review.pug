@@ -1,0 +1,11 @@
+mixin review(className, name, text, imgUrl, date)
+    .review(date=date, imgUrl=imgUrl)
+        div
+            .review__avatar
+                //- - const rec = require(`${imgUrl}`)
+                //- img(src=rec, alt="")
+            +like('', 12)
+        div
+            h3.review__name=name 
+            span.review__date=date+' дней назад'
+            blockquote.review__text=text
