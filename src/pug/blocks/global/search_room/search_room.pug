@@ -1,7 +1,7 @@
 
-mixin search_room(className){
-    form(class="card "+className)
-        h2.card__title
-        +input_range('card__range', 'прибытие', 'выезд')
-        +input_dropdown_guests('card__guests', placeholder, title, subtitle, actions)
-}
+mixin search_room(className)
+    form(class="card search-room "+className)
+        h2.card__title='Найдём номера под ваши пожелания'
+        +input_range('card__range search-room__range', 'прибытие', 'выезд')
+        +input_dropdown_guests('card__guests search-room__guests', 'Сколько гостей', 'гости', subtitle, 2)
+        +btn_type_four('card__submit search-room__submit', 'подобрать номер')(type="submit")
