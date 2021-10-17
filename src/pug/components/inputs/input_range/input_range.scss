@@ -1,6 +1,6 @@
 
 .input-range{
-    
+    position: relative;
     width: 100%;
     max-width: 320px;
     display: flex;
@@ -8,5 +8,16 @@
 
     .input-wrapper{
         width: calc(50% - 10px);
+    }
+
+    &__calendar{
+        display: none;
+        position: absolute;
+        top: calc(100% - 20px);
+        z-index: 999;
+
+        &--show{
+            display: block;
+        }
     }
 }

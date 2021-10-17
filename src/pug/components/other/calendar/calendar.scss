@@ -1,0 +1,97 @@
+
+.calendar{
+    width: 320px;
+}
+div{
+
+    .air-datepicker{
+        width: 320px;
+        padding: 10px;
+        padding-bottom: 8px;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        border-radius: 4px; 
+        box-sizing: border-box;
+
+        .air-datepicker-nav--title{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 19px;
+            line-height: 23px;
+
+            color: $darkshadow100;
+
+            i{
+                color: $darkshadow100;
+            }
+
+            
+        }
+
+        .air-datepicker--content{
+            padding-top: 25px; 
+            padding-left: 10px;
+            padding-right: 10px;
+            .air-datepicker-body--day-names{
+                margin-bottom: 8px;
+            }
+            .air-datepicker-body--day-name{
+                font-family: Montserrat;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 15px;
+                color: $purple;
+                text-transform: none;
+            }
+            .air-datepicker-body--cells{
+                color: $darkshadow50;
+                padding-top: 4px;
+                grid-auto-rows: 40px;
+            }
+
+            .air-datepicker-cell{
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 15px;
+                border-radius: 50%;
+
+
+                transition-duration: .4s;
+            }
+            .-current-{
+                color: #fff;
+                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+                border-radius: 50%;
+            }
+           .-selected-{
+                color: #fff;
+                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            }
+        }
+
+        .air-datepicker-buttons{
+            padding-top: 3px;
+            padding-bottom: 0;
+            display: flex;
+            justify-content: space-between;
+
+            .air-datepicker-button{
+                font-family: Montserrat;
+                font-style: normal;
+                font-size: 12px;
+                line-height: 15px;
+                font-weight: bold;
+                text-transform: uppercase;;
+
+                color: $purple;
+            }
+        }
+
+    }
+
+    .air-datepicker-nav--action path{
+        stroke: $purple;
+    }
+}

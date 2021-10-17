@@ -1,6 +1,6 @@
 
 mixin check(className, roomNumber=888, luxery=true, price=9990, extraprice=300, discount=2179, date1='19.08.2019', date2='23.08.2019', guestsNumber=3)
-    form(class="card check "+className data-price=price data-discount=discount data-extraprice=extraprice data-start=date1 data-stop=date2)
+    div(class="card check "+className data-price=price data-discount=discount data-extraprice=extraprice data-start=date1 data-stop=date2)
         .card__title.check__title
             .check__title-number
                 h2=roomNumber

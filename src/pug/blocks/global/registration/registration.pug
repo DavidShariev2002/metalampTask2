@@ -1,6 +1,6 @@
 
 mixin registration(className)
-    form(class="card registration")
+    div(class="card registration")
         h2.card__title='Регистрация аккаунта'
         +input_simple('registration__firstname ', 'Имя')
         +input_simple('registration__lastname', 'фамилия')
@@ -10,7 +10,7 @@ mixin registration(className)
         +input_simple('registration__burndate mask-date', 'ДД.ММ.ГГГГ', 'дата рождения')
         +input_simple('registration__email', 'Email', 'данные для входа в сервис')
         +input_simple('registration__password', 'Пароль')
-        +toggle('registration__events', 'получать спецпредложения', radioname='radio')
+        +toggle('registration__events', 'получать спецпредложения', radioname='registration__toggle')
         +btn_type_four('card__submit search-room__submit', 'перейти к оплате')(type="submit")
         .registration__sigin 
             span="Уже есть аккаунт на Toxin"

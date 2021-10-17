@@ -28,9 +28,6 @@ checks.forEach(check => {
 
     let discount = +check.dataset.discount;
 
-    console.log(dayPriceResult, extraPrice, discount);
-    console.log(dayPriceResult+extraPrice-discount)
-
     let fullPriceResult = dayPriceResult + extraPrice - discount;
 
     check.querySelector('.check__price .result').textContent=fullPriceResult;

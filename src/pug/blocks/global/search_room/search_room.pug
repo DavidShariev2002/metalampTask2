@@ -1,6 +1,6 @@
 
 mixin search_room(className)
-    form(class="card search-room "+className)
+    div(class="card search-room "+className)
         h2.card__title='Найдём номера под ваши пожелания'
         +input_range('card__range search-room__range', 'прибытие', 'выезд')
         +input_dropdown_guests('card__guests search-room__guests', 'Сколько гостей', 'гости', subtitle, 2)
