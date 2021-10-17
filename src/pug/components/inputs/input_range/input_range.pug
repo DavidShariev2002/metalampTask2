@@ -1,4 +1,4 @@
-mixin input_range(className, title1, title2)
+mixin input_range(className, title1, title2, placeholder1="ДД.ММ.ГГГГ", placeholder2="ДД.ММ.ГГГГ")
     div(class='input-range range-'+className)
-        +input_dropdown([className, ' mask-date'], 'ДД.ММ.ГГГГ', title1)
-        +input_dropdown([className, ' mask-date'], 'ДД.ММ.ГГГГ', title2)
+        +input_dropdown([className, ' mask-date'], placeholder1, title1)
+        +input_dropdown([className, ' mask-date'], placeholder2, title2)

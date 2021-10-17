@@ -1,0 +1,38 @@
+
+mixin check(className, roomNumber=888, luxery=true, price=9990, extraprice=300, discount=2179, date1='19.08.2019', date2='23.08.2019', guestsNumber=3)
+    form(class="card check "+className data-price=price data-discount=discount data-extraprice=extraprice data-start=date1 data-stop=date2)
+        .card__title.check__title
+            .check__title-number
+                h2=roomNumber
+                if(luxery)
+                    span="люкс" 
+            .check__title-price
+                strong=price+"₽"
+                span=" в сутки"
+        +input_range('card__range check-room__range', 'прибытие', 'выезд', date1, date2)
+        +input_dropdown_guests('card__guests search-room__guests', guestsNumber + ' гостя', 'Сколько гостей', subtitle, 2)
+        ul.check__price 
+            li.check__price-item.check__price-item-days 
+                span.left="000"
+                span.right="000"
+            li.check__price-item.check__price-item-services
+                span.left="Сбор за услуги: скидка "+discount+"₽"
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="10.5576" r="9.5" stroke="#1F2041" stroke-opacity="0.25"/>
+                    <path d="M9.25463 8.10162H11.1266V14.5576H9.25463V8.10162ZM10.1906 7.20162C9.84663 7.20162 9.56663 7.10162 9.35063 6.90162C9.13463 6.70162 9.02663 6.45362 9.02663 6.15762C9.02663 5.86162 9.13463 5.61362 9.35063 5.41362C9.56663 5.21362 9.84663 5.11362 10.1906 5.11362C10.5346 5.11362 10.8146 5.20962 11.0306 5.40162C11.2466 5.59362 11.3546 5.83362 11.3546 6.12162C11.3546 6.43362 11.2466 6.69362 11.0306 6.90162C10.8146 7.10162 10.5346 7.20162 10.1906 7.20162Z" fill="#1F2041" fill-opacity="0.25"/>
+                    </svg>
+
+                span.right="0₽"
+            li.check__price-item.check__price-item-extra
+                span.left="Сбор за дополнительные услуги"
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="10.5576" r="9.5" stroke="#1F2041" stroke-opacity="0.25"/>
+                    <path d="M9.25463 8.10162H11.1266V14.5576H9.25463V8.10162ZM10.1906 7.20162C9.84663 7.20162 9.56663 7.10162 9.35063 6.90162C9.13463 6.70162 9.02663 6.45362 9.02663 6.15762C9.02663 5.86162 9.13463 5.61362 9.35063 5.41362C9.56663 5.21362 9.84663 5.11362 10.1906 5.11362C10.5346 5.11362 10.8146 5.20962 11.0306 5.40162C11.2466 5.59362 11.3546 5.83362 11.3546 6.12162C11.3546 6.43362 11.2466 6.69362 11.0306 6.90162C10.8146 7.10162 10.5346 7.20162 10.1906 7.20162Z" fill="#1F2041" fill-opacity="0.25"/>
+                    </svg>
+
+                span.right=extraprice+'₽'
+            .check__price-result 
+                h2="Итого"
+                span=""
+                h2.result='000'
+        +btn_type_four('check__submit card__submit', 'забронировать')
