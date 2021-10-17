@@ -1,0 +1,10 @@
+
+mixin signin(className)
+    form(class="card signin")
+        h2.card__title="Войты"
+        +input_simple('signin__email', 'Email')
+        +input_simple('signin__passworld', 'Пароль')
+        +btn_type_four('signin__submit card__submit', 'войти')(type="submit")
+        .signin__registration
+            span="Нет аккаунт на Toxin"
+            +btn_type_two('', 'Создать')

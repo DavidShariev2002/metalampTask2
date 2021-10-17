@@ -25,6 +25,8 @@ import '../pug/components/lists/bullet_list/bullet_list';
 import '../pug/components/other/plus/plus';
 import '../pug/components/other/review/review';
 import '../pug/blocks/global/search_room/search_room';
+import '../pug/blocks/global/registration/registration';
+import '../pug/blocks/global/signin/signin';
 
 console.log('%c main script is working', 'color: green; font-size: 20px; font-weight: bolder;')
 
