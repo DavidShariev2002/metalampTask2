@@ -1,19 +1,18 @@
 import './input_dropdown_guests.scss';
 
-let btns = document.querySelectorAll('.guests-dropdown__line-btn')
-let actions = document.querySelectorAll('.guests-dropdown__actions')
+let btns = document.querySelectorAll('.panel-dropdown__line-btn')
+let actions = document.querySelectorAll('.panel-dropdown__actions')
 
 btns.forEach( btn => {
     btn.addEventListener('click', function(event){
-        let type = this.classList.contains('guests-dropdown__line-settings-up') ? 'up' : 'down';
-        let dropdownPanel = this.closest('.guests-dropdown')
-        let lines = dropdownPanel.querySelectorAll('.guests-dropdown__line')
+        let type = this.classList.contains('panel-dropdown__line-settings-up') ? 'up' : 'down';
+        let dropdownPanel = this.closest('.panel-dropdown')
+        let lines = dropdownPanel.querySelectorAll('.panel-dropdown__line')
         let input = dropdownPanel.closest('.filter-date').querySelector('.input-dropdown__input')
-        console.log(input);
 
         let inputValueString = '';
         lines.forEach( line => {
-            let value = line.querySelector('.guests-dropdown__line-settings-number').textContent
+            let value = line.querySelector('.panel-dropdown__line-settings-number').textContent
             let param = line.querySelector('h3').textContent;
             inputValueString+= value + " " + param + ", "
 
@@ -23,7 +22,6 @@ btns.forEach( btn => {
         })
         input.value = inputValueString;
 
-        console.log(lines)
     })
 })
 
@@ -31,17 +29,17 @@ btns.forEach( btn => {
 actions.forEach( actionPanel => {
     actionPanel.addEventListener('click', function(event){
         let btn = event.target;
-        let dropdownPanel = this.closest('.guests-dropdown')
+        let dropdownPanel = this.closest('.panel-dropdown')
         let input = dropdownPanel.closest('.filter-date').querySelector('.input-dropdown__input')
         
 
         if (btn.classList.contains('countform__btns-clear')){
-            let lines = dropdownPanel.querySelectorAll('.guests-dropdown__line')
+            let lines = dropdownPanel.querySelectorAll('.panel-dropdown__line')
 
             lines.forEach(line => {
-                line.querySelector('.guests-dropdown__line-settings').classList.add('zero-value');
-                line.querySelector('.guests-dropdown__line-settings').classList.remove('full-value')
-                let value = line.querySelector('.guests-dropdown__line-settings-number')
+                line.querySelector('.panel-dropdown__line-settings').classList.add('zero-value');
+                line.querySelector('.panel-dropdown__line-settings').classList.remove('full-value')
+                let value = line.querySelector('.panel-dropdown__line-settings-number')
                 value.textContent = '0'
             })
 
@@ -55,4 +53,4 @@ actions.forEach( actionPanel => {
     })
 })
 
-console.log("%c input_dropdown_guests script is working", "color: green;")
+console.log("%c input_dropdown_guest script is working", "color: green;")

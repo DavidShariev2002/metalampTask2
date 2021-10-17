@@ -1,0 +1,13 @@
+mixin panel_dropdown(className, params, action)
+    div(class="panel-dropdown panel-dropdown-"+action+" "+className)
+        each par in params 
+            .panel-dropdown__line 
+                h3=par 
+                .panel-dropdown__line-settings.zero-value
+                    button(type="button").panel-dropdown__line-btn.panel-dropdown__line-settings-down -
+                    span.panel-dropdown__line-settings-number 0
+                    button(type="button").panel-dropdown__line-btn.panel-dropdown__line-settings-up +
+            
+        .panel-dropdown__actions 
+            +btn_type_three('countform__btns-clear', 'очистить')(type='button')
+            +btn_type_three('countform__btns-access', 'применить')(type='button') 

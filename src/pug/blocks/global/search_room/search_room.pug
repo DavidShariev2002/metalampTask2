@@ -1,0 +1,7 @@
+
+mixin search_room(className){
+    form(class="card "+className)
+        h2.card__title
+        +input_range('card__range', 'прибытие', 'выезд')
+        +input_dropdown_guests('card__guests', placeholder, title, subtitle, actions)
+}

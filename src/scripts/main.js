@@ -17,7 +17,7 @@ import '../pug/components/buttons/btn_type_two/btn_type_two';
 import '../pug/components/buttons/btn_type_three/btn_type_three';
 import '../pug/components/buttons/btn_type_four/btn_type_four';
 import '../pug/components/other/pagination/pagination';
-import '../pug/components/other/guests_dropdown/guests_dropdown';
+import '../pug/components/other/panel_dropdown/panel_dropdown';
 import '../pug/components/inputs/input_dropdown_guests/input_dropdown_guests';
 import '../pug/components/lists/checkbox_list/checkbox_list';
 import '../pug/components/inputs/rich_checkbox/rich_checkbox';

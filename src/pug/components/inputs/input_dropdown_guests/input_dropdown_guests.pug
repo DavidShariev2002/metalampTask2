@@ -1,5 +1,5 @@
-mixin input_dropdown_quests(className, placeholder, title, subtitle, actions)
+mixin input_dropdown_guests(className, placeholder, title, subtitle, actions)
     div(class="filter-date filter-date-quests filter-"+className)
-        +input_dropdown(className, 'Удобства ', title, subtitle)
+        +input_dropdown(className, 'гости ', title, subtitle)
         div(class="filter-date__dropdown")
-            +guests_dropdown('some-dropdonw', ['спальни', 'кровати', 'ванные комнаты'],actions)
+            +panel_dropdown('some-dropdonw', ['взрослые', 'дети', 'младенцы'],actions)

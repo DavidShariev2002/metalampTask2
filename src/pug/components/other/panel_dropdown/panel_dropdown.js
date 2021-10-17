@@ -1,11 +1,11 @@
-import './guests_dropdown.scss';
+import './panel_dropdown.scss';
 
-let dropdownBtns = document.querySelectorAll('.guests-dropdown__line-btn')
+let dropdownBtns = document.querySelectorAll('.panel-dropdown__line-btn')
 dropdownBtns.forEach( btn => {
     btn.addEventListener('click', function(event){
-        let type = this.classList.contains('guests-dropdown__line-settings-up') ? 'up' : 'down';
-        let dropdownPanel = this.closest('.guests-dropdown');
-        let settingsPanel = this.closest('.guests-dropdown__line-settings')
+        let type = this.classList.contains('panel-dropdown__line-settings-up') ? 'up' : 'down';
+        let dropdownPanel = this.closest('.panel-dropdown');
+        let settingsPanel = this.closest('.panel-dropdown__line-settings')
         let valueSpan = settingsPanel.querySelector('span');
         let value = +valueSpan.textContent
         
@@ -38,4 +38,4 @@ dropdownBtns.forEach( btn => {
     })
 })
 
-console.log('%c quests_dropdown script is working', 'color: green;')
+console.log('%c panel_dropdown script is working', 'color: green;')
