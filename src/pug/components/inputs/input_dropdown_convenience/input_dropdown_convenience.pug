@@ -1,0 +1,5 @@
+mixin input_dropdown_convenience(className, placeholder, title, subtitle, actions)
+    div(class="filter-date filter-date-convenience filter-"+className)
+        +input_dropdown(className, 'гости ', title, subtitle)
+        div(class="filter-date__dropdown")
+            +panel_dropdown('some-dropdonw', ['спальни', 'кровати', 'ванные комнаты'],actions)
