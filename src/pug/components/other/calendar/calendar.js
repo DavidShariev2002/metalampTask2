@@ -1,6 +1,5 @@
 import './calendar.scss';
 
-import '../../../../../node_modules/air-datepicker/air-datepicker';
 import '../../../../../node_modules/air-datepicker/air-datepicker.css';
 import AirDatepicker from '../../../../../node_modules/air-datepicker/air-datepicker';
 

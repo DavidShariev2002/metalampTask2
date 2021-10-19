@@ -109,6 +109,17 @@ module.exports = {
             },
         ]
     },
+    resolve: {
+        alias: {
+            'jquery': _path('node_modules/jquery/dist/jquery'),
+            'inputmask.dependencyLib': _path('node_modules/inputmask/dist/inputmask/inputmask.dependencyLib'),
+            'inputmask': _path('node_modules/inputmask/dist/inputmask/inputmask'),
+            'jquery.inputmask': _path('node_modules/inputmask/dist/inputmask/jquery.inputmask'),
+            'inputmask.numeric.extensions': _path('node_modules/inputmask/dist/inputmask/inputmask.numeric.extensions'),
+            'slick-carousel': _path('/node_modules/slick-carousel/slick/slick.min.js'),
+            'slick-carouse-styles': _path('/node_modules/slick-carousel/slick/slick-theme.scss'),
+        },
+    },
     plugins: [
         new CopyPlugin({
             patterns: [
@@ -118,6 +129,7 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
+            
         }),
         new HtmlWebpackPlugin({
             template: src.pages + '/show_components/show_components.pug',

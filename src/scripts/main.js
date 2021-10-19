@@ -32,5 +32,7 @@ import '../pug/blocks/global/registration/registration';
 import '../pug/blocks/global/signin/signin';
 import '../pug/blocks/global/check/check';
 
+import '../pug/components/other/room_slider/room_slider';
+
 console.log('%c main script is working', 'color: green; font-size: 20px; font-weight: bolder;')
 

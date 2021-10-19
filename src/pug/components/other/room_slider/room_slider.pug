@@ -1,0 +1,29 @@
+mixin room_slider(classList, number, luxury=false, price, stars, reviews, imageUrls)
+    div(class="room-slider "+classList data-imageurls=imageUrls)
+        .room-slider__slider-wrapper
+            button.room-slider__slider-btn.room-slider__slider-btn--prev
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#fff" />
+                </svg>
+
+            div(class='room-slider__slider')
+
+            .room-slider__slider-dots
+
+            button.room-slider__slider-btn.room-slider__slider-btn--next
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#fff" />
+                </svg>
+        .room-slider__info
+            .room-slider__info-number=number
+                span.room-slider__info-number-sym='№'
+                if(luxury)
+                    span.room-slider__info-number-lux="люкс"
+            .room-slider__info-price
+                strong=price + "₽"
+                span=' в сутки'
+            .room-slider__stars
+                +stars('', stars)
+            .room-slider__reviews
+                strong=reviews 
+                span=' Отзывов'
