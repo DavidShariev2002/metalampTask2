@@ -17,6 +17,10 @@
     font-style: normal;
 }
 
+body{
+    color: $darkshadow50;
+}
+
 h1, h2, h3, h4{
     color: $darkshadow100;
     font-weight: bold;
@@ -38,6 +42,10 @@ h3{
     text-transform: uppercase;
 
     margin-bottom: 18px;
+}
+
+span{
+    color: $darkshadow50;
 }
 
 

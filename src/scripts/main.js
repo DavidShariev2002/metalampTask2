@@ -9,6 +9,7 @@ import '../pug/components/inputs/input_range/input_range';
 
 import '../pug/components/inputs/filter_date/filter_date';
 import '../pug/components/inputs/subscription/subscription';
+import '../pug/components/lists/link_list/link_list';
 import '../pug/components/inputs/checkbox/checkbox';
 import '../pug/components/inputs/radiobox/radiobox';
 import '../pug/components/buttons/toggle/toggle';
@@ -31,6 +32,9 @@ import '../pug/blocks/global/search_room/search_room';
 import '../pug/blocks/global/registration/registration';
 import '../pug/blocks/global/signin/signin';
 import '../pug/blocks/global/check/check';
+
+import '../pug/blocks/global/header/header';
+import '../pug/blocks/global/footer/footer';
 
 import '../pug/components/other/room_slider/room_slider';
 

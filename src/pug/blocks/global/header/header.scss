@@ -1,9 +1,49 @@
 .header{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    
-    background-color: #000;
-    color: #fff;
+    align-items: center;
+    color: $darkshadow50;
+    padding: 15px;
 
+    &__logo{
+        width: 105px;
+
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .active-page-link{
+        a{
+            font-weight: 600;
+
+        }
+    }
+
+    &__nav{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       
+       &-item{
+           padding: 5px 10px;
+       }
+
+       .header__nav-item-name{
+           margin-left: 17px;
+       }
+
+       &-registration{
+           padding-top: 10px;
+           padding-bottom: 10px;
+       }
+       &--signin{
+           padding-top: 7px;
+           padding-bottom: 7px;
+       }
+    }
 }
 
