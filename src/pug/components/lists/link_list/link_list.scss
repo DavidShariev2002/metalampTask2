@@ -6,10 +6,12 @@
     color: $darkshadow50;
 
     &__title{
+        padding-right: 5px;
         cursor: pointer;
 
         svg{
-            margin-left: 5px;
+            margin-right: 0;
+            margin-left: 7px;
         }
     }
     
@@ -20,7 +22,8 @@
         position: absolute;
         top: calc(100% + 10px);
         left: -10px;
-        padding: 5px 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
         background-color: #fff;
         border: 1px solid $darkshadow25;
         border-radius: 4px;

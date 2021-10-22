@@ -1,0 +1,10 @@
+
+.first-screen 
+    +header('first-screen__header', false, name="noname", activePage="")
+    img(class="first-screen__content-background" src=require('../../../assets/img/first-screen-background.png'), alt="")
+
+    .container.first-screen__content
+        +search_room('first-header__content-sigin')
+        span='Лучшие номера для вашей работы, отдыха и просто вдохновения'
+    
++footer('', false)

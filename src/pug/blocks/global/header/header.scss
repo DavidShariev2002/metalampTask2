@@ -1,13 +1,19 @@
 .header{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: $darkshadow50;
-    padding: 15px;
+    background-color: #fff;
+    
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $darkshadow50;
+        padding: 15px 20px;
+    }
 
     &__logo{
+        height: 40px;
         width: 105px;
+        align-items: flex-end;
 
         img{
             display: block;
@@ -24,26 +30,34 @@
     }
 
     &__nav{
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       
-       &-item{
-           padding: 5px 10px;
-       }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &-item{
+            padding: 5px 10px;
+        }
 
-       .header__nav-item-name{
-           margin-left: 17px;
-       }
+        &-btn{
+            margin-left: 13px;
+        }
+        &-btn:last-child{
+            margin-left: 20px;
+        }
+        
 
-       &-registration{
-           padding-top: 10px;
-           padding-bottom: 10px;
-       }
-       &--signin{
-           padding-top: 7px;
-           padding-bottom: 7px;
-       }
+        .header__nav-item-name{
+            margin-left: 17px;
+        }
+
+        &--registration{
+            padding-top: 9px;
+            padding-bottom: 10px;
+        }
+        &--signin{
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
     }
 }
 
