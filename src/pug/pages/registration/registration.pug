@@ -2,8 +2,14 @@
 extends ../base/layout.pug
 
 block head
-    
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title TOXIN Registration
+
+    include ../base/includes.pug
+
 block content 
-    h1 Registration 
-
-
+    +header('first-screen__header', false, name="noname", activePage="")
+    include ../../blocks/registration/first_screen/first_screen.pug
+    +footer('', false)

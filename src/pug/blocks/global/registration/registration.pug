@@ -11,7 +11,7 @@ mixin registration(className)
         +input_simple('registration__email', 'Email', 'данные для входа в сервис')
         +input_simple('registration__password', 'Пароль')
         +toggle('registration__events', 'получать спецпредложения', radioname='registration__toggle')
-        +btn_type_four('card__submit search-room__submit', 'перейти к оплате')(type="submit")
+        +btn_type_four('card__submit search-room__submit', 'Зарегестрироваться')(type="submit")
         .registration__sigin 
             span="Уже есть аккаунт на Toxin"
             +btn_type_two('', 'Войти')
