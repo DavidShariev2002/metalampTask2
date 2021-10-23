@@ -1,0 +1,30 @@
+
+.sidebar
+    +filter_date('sidebar__dates', 'даты пребывания в отеле')
+    +input_dropdown_guests('sidebar__guests', 'гости', 'гости', subtitle, 2)
+    +range('sidebar__range', 'диапазон цены', 0, 20000, 'Cтоимость за сутки пребывания в номере')
+    
+    .sidebar__rules 
+        h3.sidebar__rules-title="Правила дома"
+        +checkbox('sidebar__rules-checkbox', 'Можно курить', '', 'sidebar__rules-checkbox-1')
+        +checkbox('sidebar__rules-checkbox', 'Можно с питомцами', '', 'sidebar__rules-checkbox-2')
+        +checkbox('sidebar__rules-checkbox', 'Можно пригласить гостей (до 10 человек)', '', 'sidebar__rules-checkbox-3')
+    .sidebar__accessibility
+        h3.sidebar__accessibility-title="Доступность"
+        +rich_checkbox('sidebar__accessibility-checkbox',
+            'Широкий коридор', 
+            'Ширина коридоров в номере не менее 91 см.',
+            '', 'sidebar__accessibility-checkbox--1')
+        +rich_checkbox('sidebar__accessibility-checkbox',
+            'Помощник для инвалидов', 
+            'На 1 этаже вас встретит специалист  и проводит до номера.',
+            '', 'sidebar__accessibility-checkbox--2')
+
+
+    +input_dropdown_convenience('sidebar__comfort', 'Удобства', 'Удобства номера', '', 0)
+    +checkbox_list('sidebar__list--2',
+        'Дополнительные удобства ',
+        [
+            ['Широкий коридор', 'Ширина коридоров в номере не менее 91 см.'],
+            ['Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.']
+        ], rich=true)  

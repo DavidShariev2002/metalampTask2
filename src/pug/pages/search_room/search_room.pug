@@ -1,9 +1,19 @@
-
 extends ../base/layout.pug
 
 block head
-    
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title TOXIN search room
+
+    include ../base/includes.pug
+
 block content 
-    h1 Search Room
+    +header('search-room__header', false, name="noname", activePage="")
+    
+    .search-room__content
+        .container
+            include ../../blocks/search_room/sidebar/sidebar.pug
+            include ../../blocks/search_room/pagelist/pagelist.pug
 
-
+    +footer('search-room__footer', false)

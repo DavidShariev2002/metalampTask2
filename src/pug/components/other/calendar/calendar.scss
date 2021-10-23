@@ -76,6 +76,7 @@ div{
             padding-bottom: 0;
             display: flex;
             justify-content: space-between;
+           
 
             .air-datepicker-button{
                 font-family: Montserrat;
@@ -86,6 +87,10 @@ div{
                 text-transform: uppercase;;
 
                 color: $purple;
+
+                span{
+                    color: $purple;
+                }
             }
         }
 

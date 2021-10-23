@@ -33,8 +33,4 @@ calendar.forEach( calendar => {
     calendar.querySelector('.air-datepicker-nav--action[data-action="next"] svg').innerHTML = "<path d='M 13,11 l 6,6 l -6,6 M 6,17 l 12,0' fill='#BC9CFF'/>"
 })
 
-console.log(document.dp_list);
-
-
-
 console.log('%c calendar script is working', 'color: green;')
