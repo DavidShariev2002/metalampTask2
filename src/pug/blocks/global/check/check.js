@@ -30,7 +30,7 @@ checks.forEach(check => {
 
     let fullPriceResult = dayPriceResult + extraPrice - discount;
 
-    check.querySelector('.check__price .result').textContent=fullPriceResult;
+    check.querySelector('.check__price .result').textContent = fullPriceResult +"₽";
 
     
     

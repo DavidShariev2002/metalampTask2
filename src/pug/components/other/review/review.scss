@@ -5,8 +5,8 @@
     justify-content: space-between;
 
     .review__avatar{
-        width: 40px;
-        height: 40px;
+        width: 48px;
+        height: 48px;
         border-radius: 50%;
         overflow: hidden;
 
@@ -14,9 +14,16 @@
         margin-bottom: 12px;
 
         img{
-            width: 100%;
-            height: auto;
+            width: 48px;
+            height: 48px;
         }
+
+        
+    }
+    .like{
+        display: block;
+        margin-left: 5px;
+        margin-top: -1px;
     }
     
     .review__name{

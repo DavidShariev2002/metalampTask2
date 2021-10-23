@@ -1,5 +1,5 @@
 
-mixin check(className, roomNumber=888, luxery=true, price=9990, extraprice=300, discount=2179, date1='19.08.2019', date2='23.08.2019', guestsNumber=3)
+mixin check(className, roomNumber=888, luxery=true, price=9990, extraprice=300, discount='2 179', date1='19.08.2019', date2='23.08.2019', guestsNumber=3)
     div(class="card check "+className data-price=price data-discount=discount data-extraprice=extraprice data-start=date1 data-stop=date2)
         .card__title.check__title
             .check__title-number
@@ -10,7 +10,7 @@ mixin check(className, roomNumber=888, luxery=true, price=9990, extraprice=300, 
                 strong=price+"₽"
                 span=" в сутки"
         +input_range('card__range check-room__range', 'прибытие', 'выезд', date1, date2)
-        +input_dropdown_guests('card__guests search-room__guests', guestsNumber + ' гостя', 'Сколько гостей', subtitle, 2)
+        +input_dropdown_guests('card__guests search-room__guests', guestsNumber + ' гостя', 'Гости', subtitle, 2)
         ul.check__price 
             li.check__price-item.check__price-item-days 
                 span.left="000"

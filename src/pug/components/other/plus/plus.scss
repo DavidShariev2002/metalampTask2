@@ -7,15 +7,23 @@
     
     &__img{
         width: 48px;
+        height: 48px;
+        text-align: center;
+        line-height: 48px;
+
+        img{
+            display: inline;
+        }
     }
     
     &__text{
         color: $darkshadow75;
-        margin-left: 6px;
-        padding-top: 1px;
+        margin-left: 10px;
 
         &-title{
             margin-bottom: 4px;
+            text-transform: none;
+            font-size: 14px;
         }
     }
 }

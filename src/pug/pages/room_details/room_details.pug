@@ -2,8 +2,23 @@
 extends ../base/layout.pug
 
 block head
-    
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title TOXIN Landing Page
+
+    include ../base/includes.pug
+    include ../../blocks/room_details/images/images.pug
+    include ../../components/other/pie_chart/pie_chart.pug
+
 block content 
-    h1 Room Details
+    +header('room-details__header', false, name="noname", activePage="")
 
+    +images('room-details__images', 
+        '../assets/img/dynamic/headimage1.png', 
+        '../assets/img/dynamic/headimage2.png', 
+        '../assets/img/dynamic/headimage3.png')
+    
+    include ../../blocks/room_details/details/details.pug
 
+    +footer('room-details__footer', false)

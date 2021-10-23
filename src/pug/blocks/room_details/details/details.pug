@@ -1,0 +1,42 @@
+
+.details
+    .details__wrapper.container
+        .details__leftpart
+            .details__leftpart-info
+                h2.details__leftpart-info-title=" Сведения о номере"
+                +plus('details__leftpart-info-plus', 
+                    'Комфорт', 'Шумопоглащающие стены', 
+                    '../../assets/img/dynamic/smile.svg')
+                +plus('details__leftpart-info-plus', 
+                    'Удобство', 'Окна в каждой из спален', 
+                    '../../assets/img/dynamic/building.svg')
+                +plus('details__leftpart-info-plus', 
+                'Уют', 'Номер оснащен камином', 
+                '../../assets/img/dynamic/fire.png')
+            .details__leftpart-pie
+                h2.details__leftpart-pie-title=" Впечатления от номера"
+                +pie_chart('details__leftpart-pie-wrapper', 130, 65, 65, 0)
+            .details__leftpart-reviews
+                h2.details__leftpart-reviews-title="Отзывы посетителей номера"
+                +review('details__lefpart-review-item',
+                    'Мурад Сарафанов',
+                    'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                    '../../assets/img/dynamic/anonim.jpg', '2021-10-07',
+                    12)
+                +review('details__lefpart-review-item',
+                    'Патрисия Стеклышкова',
+                    'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.',
+                    '../../assets/img/dynamic/anonim.jpg', '2021-10-01',
+                    2)
+            .details__leftpart-rules
+                h2.details__leftpart-rules-title=" Правила"
+                +bullet_list('details__leftpart-rules-list', 
+                    '', 
+                    [   'Нелизя с питомцами', 
+                        'Без вечеринок и мероприятий', 
+                        'Время прибытия - после 13:00, а выезд до 12:00'])
+            .details__leftpart-cancel
+                h2.details__leftpart-cancel-title=" Отмена"
+                span.details__lefpart-cancel-span="Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
+        .details__rightpart
+            +check('details__rightpart-check', roomNumber=888, luxery=true, price=9990, extraprice=300, discount=2179, date1='19.08.2019', date2='23.08.2019', guestsNumber=3)

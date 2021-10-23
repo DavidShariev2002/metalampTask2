@@ -1,10 +1,10 @@
-mixin review(className, name, text, imgUrl, date)
+mixin review(className, name, text, imgUrl, date, likes)
     .review(date=date, imgUrl=imgUrl)
         div
             .review__avatar
                 //- - const rec = require(`${imgUrl}`)
                 //- img(src=rec, alt="")
-            +like('', 12)
+            +like('', likes)
         div
             h3.review__name=name 
             span.review__date=date+' дней назад'

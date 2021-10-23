@@ -1,0 +1,16 @@
+
+mixin pie_chart(className, awesome, good, medium, bad)
+    .pie_chart__wrapper
+        canvas(class='pie_chart '+className width='120px' height='120px' awesome=awesome good=good, medium=medium, bad=bad)
+        .pie_chart_reviews
+            strong=(awesome+good+medium+bad)
+            span='Голосов'
+        ul.pie_char_info 
+            li.pie_char_info-item='Великолепно'
+                .dot.dot__awesome
+            li.pie_char_info-item='Хорошо'
+                .dot.dot__good
+            li.pie_char_info-item='Удовлетворительно'
+                .dot.dot__medium
+            li.pie_char_info-item='Разачарован'
+                .dot.dot__bad
