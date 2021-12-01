@@ -3,12 +3,15 @@
     margin-bottom: 14px;
     justify-content: start;
     align-items: flex-start;
+    cursor: pointer;
 
     .toggle__input{
         width: 40px;
         height: 20px;
         margin: 0;
         opacity: 0;
+
+        cursor: pointer;
     }
     
     label{
@@ -19,12 +22,13 @@
 
         transition-duration: .4s;
 
+        cursor: pointer;
+
         strong{
             color: rgba(31, 32, 65, 0.75);
             display: inline-block;
             width: 100%;
         }
-       
 
         &::after{
             content: "";

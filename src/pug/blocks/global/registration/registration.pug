@@ -1,6 +1,6 @@
 
 mixin registration(className)
-    div(class="card registration")
+    form(class="card registration")
         h2.card__title='Регистрация аккаунта'
         +input_simple('registration__firstname ', 'Имя')
         +input_simple('registration__lastname', 'фамилия')
@@ -14,4 +14,5 @@ mixin registration(className)
         +btn_type_four('card__submit search-room__submit', 'Зарегестрироваться')(type="submit")
         .registration__sigin 
             span="Уже есть аккаунт на Toxin"
-            +btn_type_two('', 'Войти')
+            a(href="/pages/sign_in.html") 
+                +btn_type_two('', 'Войти')

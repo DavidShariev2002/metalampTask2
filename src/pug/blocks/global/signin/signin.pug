@@ -7,4 +7,5 @@ mixin signin(className)
         +btn_type_four('signin__submit card__submit', 'войти')(type="submit")
         .signin__registration
             span="Нет аккаунт на Toxin"
-            +btn_type_two('', 'Создать')
+            a(href="/pages/registration.html") 
+                +btn_type_two('', 'Создать')

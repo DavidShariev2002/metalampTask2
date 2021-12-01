@@ -31,21 +31,21 @@ mixin header(className, logined=false, name="noname", activePage="about-us")
 
             .header__nav
                 .header__nav-about-us.about-us
-                    a(class="header__nav-item" href="./pages/about-us.html")='О нас'
+                    a(class="header__nav-item" href="/pages/about-us.html")='О нас'
                 .header__nav-item.header__nav-services
                     +link_list('.services', 'Услуги',
                         [['услуга 1', 'https://google.com'], ['услуга 2', 'https://google.com']])
                 .header__nav-vacancies.vacancies
-                    a(class="header__nav-item" href="./pages/vacancies.html")="Вакансии"
+                    a(class="header__nav-item" href="/pages/vacancies.html")="Вакансии"
                 .header__nav-news.news
-                    a(class="header__nav-item" href="./pages/news.html")="Новости"
+                    a(class="header__nav-item" href="/pages/news.html")="Новости"
                 .header__nav-item.header__nav-agreements
                     +link_list('.agreements', 'Соглашения',
                         [['соглашениe 1', 'https://google.com'], ['соглашениe 2', 'https://google.com']])
                 if(!logined)
-                    a(class="header__nav-btn" href="./pages/sign_in.html")
+                    a(class="header__nav-btn" href="/pages/sign_in.html")
                         +btn_type_two(" header__nav--signin", "войти")
-                    a(class="header__nav-btn" href="./pages/registration.html")
+                    a(class="header__nav-btn" href="/pages/registration.html")
                         +btn_type_one(' header__nav--registration', "зарегистрироваться")
                 if(logined)
                     .header__nav-item.header__nav-item-name=name
